@@ -59,3 +59,12 @@ main {
   border: none;
   box-shadow: 0px 1px 2px 0px #0000000D;
 }
+
+.ingredients-list-item {
+  color: #475467;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: Inter;
+  
+}
