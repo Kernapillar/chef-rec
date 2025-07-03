@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import Header from './components/header'
-import IngredientInput from './components/IngredientInput'
+import Header from './components/header.jsx'
+import Main from './components/Main'
 
 function App() {
 
   return (
     <>
       <Header/>
-      <IngredientInput/>
+      <Main/>
     </>
   )
 }
