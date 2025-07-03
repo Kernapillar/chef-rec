@@ -8,7 +8,7 @@ body {
   background-color: #FAFAF8;
   font-family: Inter;
   font-weight: 400;
-  font-size: 32px;
+  
 }
 
 .header-container {
@@ -16,14 +16,39 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 111px;
+  height: 90px;
   background-color: white;
   box-shadow: 0px 2px 2px 0px #0000000F;
-  
+  font-size: 32px;
 
 }
 
 .header-icon {
   height: 52px;
   padding-right: 15px;
+}
+
+.input-container {
+  display: flex;
+  height: 40px;
+  margin-top: 40px;
+  justify-content: center;
+
+}
+.input-container > input {
+  margin-right: 10px;
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  width: 320px;
+  font-size: 14px;
+  color: #6B7280;
+  box-shadow: 0px 1px 2px 0px #0000000D;
+}
+
+.input-container > button {
+  background-color: #141413;
+  color: white;
+  border-radius: 6px;
+  width: 160px;
+  box-shadow: 0px 1px 2px 0px #0000000D;
 }
