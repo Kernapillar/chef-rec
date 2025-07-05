@@ -4,11 +4,9 @@ export default function Main(){
 
     const data = ["chicken", "onion", "bell pepper", "garlic", "Steamed Rice" ]
 
-    const showIngredients = (ingredients) => {
-        return (
-            ingredients.map((ing, i) => <li className="ingredients-list-item" key={i}>{ing}</li>)
-        )
-    }
+    const ingredientsList = data.map(
+        (ing, i) => <li className="ingredients-list-item" key={i}>{ing}</li>
+    )
 
     const logging = ()=>{
         console.log("Ive been clicked")
@@ -20,9 +18,9 @@ export default function Main(){
                 <input type="text" placeholder="e.g garlic" aria-label="Add ingredient" />
                 <button onClick={logging}>+ Add ingredient</button>
             </form>
-
-            <ul>
-                {showIngredients(data)}
+            
+            <ul className="ingredients-list">
+                {ingredientsList}
             </ul>
         </main>
     )
