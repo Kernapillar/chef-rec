@@ -8,19 +8,16 @@ export default function Main(){
         (ing, i) => <li className="ingredients-list-item" key={i}>{ing}</li>
     )
 
-    function handleSubmit(event) {
-        event.preventDefault()
-        const formData = new FormData(event.currentTarget)
+    function addIngredient(formData) {
         const newIngredient = formData.get("ingredient")
         if (newIngredient.trim() != "") {
             setIngredients(prevIngredient => [...prevIngredient, newIngredient])
         } 
-        event.target.reset()
     }
 
     return (
         <main>
-            <form className="input-container" onSubmit={handleSubmit}>
+            <form className="input-container" action={addIngredient}>
                 <input type="text" placeholder="e.g garlic" aria-label="Add ingredient" name="ingredient"/>
                 <button type="submit">+ Add ingredient</button>
             </form>
