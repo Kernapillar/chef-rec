@@ -12,8 +12,9 @@ export default function Main(){
         const newIngredient = formData.get("ingredient")
         if (newIngredient.trim() != "") {
             setIngredients(prevIngredient => [...prevIngredient, newIngredient])
-        } 
+        }
     }
+
 
     return (
         <main>
@@ -23,8 +24,16 @@ export default function Main(){
             </form>
             
             <ul className="ingredients-list">
-                {ingredientsList}
+                {ingredients.length > 0 && <h2>Ingredients On Hand:</h2>}
+                {ingredients.length === 0 ? <h2>Lets Add some Ingredients!</h2> : ingredientsList }
             </ul>
+            { ingredients.length >= 4 && <div className="get-recipe-container">
+                    <div>
+                        <h3>Ready for a recipe?</h3>
+                        <p>Generate a recipe from your list of ingredients.</p>
+                    </div>
+                    <button>Get a recipe</button>
+                </div> }
         </main>
     )
 }
