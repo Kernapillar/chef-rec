@@ -1,14 +1,11 @@
 import React from "react"
 import Recipe from "./Recipe";
+import IngredientsList from "./IngredientsList";
 
 export default function Main(){
 
     const [ingredients, setIngredients]= React.useState([]);
     const [recipeShown, setRecipeShown] = React.useState(false);
-
-    const ingredientsList = ingredients.map(
-        (ing, i) => <li className="ingredients-list-item" key={i}>{ing}</li>
-    )
 
     function addIngredient(formData) {
         const newIngredient = formData.get("ingredient")
@@ -21,7 +18,7 @@ export default function Main(){
         setRecipeShown(prevState => !prevState)
     }
 
-    const testRecipe = <Recipe />
+    const testRecipe = <Recipe ingredients={ingredients} />
 
     return (
         <main>
@@ -29,11 +26,10 @@ export default function Main(){
                 <input type="text" placeholder="e.g garlic" aria-label="Add ingredient" name="ingredient"/>
                 <button type="submit">+ Add ingredient</button>
             </form>
+
+            <IngredientsList ingredients={ingredients} />
             
-            <ul className="ingredients-list">
-                {ingredients.length > 0 && <h2>Ingredients On Hand:</h2>}
-                {ingredients.length === 0 ? <h2>Lets Add some Ingredients!</h2> : ingredientsList }
-            </ul>
+
             { ingredients.length >= 4 && <div className="get-recipe-container">
                     <div>
                         <h3>Ready for a recipe?</h3>
