@@ -28,7 +28,6 @@ export default function Main(){
             </form>
 
             <IngredientsList ingredients={ingredients} />
-            
 
             { ingredients.length >= 4 && <div className="get-recipe-container">
                     <div>
