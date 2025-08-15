@@ -9,7 +9,7 @@ export default function Recipe() {
                 <h3>Beef Bolognese Pasta</h3>
                 <strong>Ingredients:</strong>
                 <ul>
-                    <li>1 lb. ground beef</li>
+                    <li>1 lb. ground chicken</li>
                     <li>1 onion, diced</li>
                     <li>3 cloves garlic, minced</li>
                     <li>2 tablespoons tomato paste</li>
